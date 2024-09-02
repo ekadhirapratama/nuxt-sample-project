@@ -4,13 +4,19 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "VITE_CJS_IGNORE_WARNING=true nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "nuxt": "^3.13.0",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vuetify": "^3.7.1"
   }
 }
