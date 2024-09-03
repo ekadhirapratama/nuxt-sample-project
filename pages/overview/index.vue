@@ -1,6 +1,6 @@
 <template>
   <!-- web -->
-  <div>
+  <div class="bg-[#F9F9F9]">
     <v-row v-show="display.mdAndUp">
       <v-col md="8">
         <OverviewSummary />
