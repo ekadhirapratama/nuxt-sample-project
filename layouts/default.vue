@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <v-app>
+  <v-app class="max-w-[1200px] mx-auto">
     <slot/>
   </v-app>
 </template>
