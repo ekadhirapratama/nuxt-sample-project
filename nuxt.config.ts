@@ -16,7 +16,12 @@ export default defineNuxtConfig({
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
-        config.plugins.push(vuetify({ autoImport: true }))
+        config.plugins.push(vuetify({ 
+          autoImport: true,
+          styles: {
+            configFile: '/styles/settings.scss',
+          }
+        }))
       })
     },
     '@nuxtjs/tailwindcss',
@@ -28,5 +33,10 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    server: {
+      hmr: {
+        overlay: false
+      }
+    }
   },
 })
