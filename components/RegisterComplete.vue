@@ -12,7 +12,7 @@
       width="200px" 
       src="@/assets/register-guide-vertical.png"
     ></v-img>
-    <v-btn color="#EC4B5A" @click="$router.push({ name: 'Login' })">Login to Axdif</v-btn>
+    <v-btn color="#EC4B5A" @click="navigateTo('/')">Login to Axdif</v-btn>
   </div>
 </template>
 

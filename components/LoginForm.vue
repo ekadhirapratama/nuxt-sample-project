@@ -46,7 +46,7 @@
     </v-btn>
   </div>
 
-  <v-btn color="#EC4B5A" block @click="$router.push({ name: 'Overview' })" size="large">
+  <v-btn color="#EC4B5A" block @click="navigateTo('/overview')" size="large">
     Login
   </v-btn>
 </template>

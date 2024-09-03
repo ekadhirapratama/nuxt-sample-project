@@ -16,7 +16,7 @@
         :key="i"
         variant="text" 
         color="#888FB0" 
-        @click="navigation(item)"
+        @click="item.routeName == '#' ? null : navigateTo('/'+item.routeName)"
       >
         {{ item.label }}
       </v-btn>
@@ -80,11 +80,9 @@
 <script setup>
 import { ref } from 'vue';
 import { useDisplay } from 'vuetify/lib/framework.mjs';
-import { useRouter } from 'vue-router';
-const router = useRouter()
 
 const display = ref(useDisplay());
-const navMenu = ref(router.currentRoute.value.name);
+const navMenu = ref("Test");
 
 const menus = [
   {
@@ -112,13 +110,6 @@ const menus = [
     routeName: '#'
   },
 ]
-
-const navigation = (navItem) => {
-  if (navItem.routeName) {
-    navMenu.value = navItem.label;
-    router.push({ name: navItem.routeName });
-  }
-}
 </script>
 
 <style scoped>
